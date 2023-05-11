@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <SDL2/SDL.h>
+#include "flappy.h"
+
 /*I followed Matsson's guide to set up this c environment + SDL canvas*/
 
 const int WIDTH = 640;
@@ -10,6 +12,7 @@ const int SIZE = 30;
 
 int main(int argc, char *argv[])
 {
+    jump();
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         printf("Error initializing SDL %s\n", SDL_GetError());
         system("pause");
